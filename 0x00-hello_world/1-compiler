@@ -1,2 +1,2 @@
 #!/bin/bash
-c- gcc $CFILE > $CFILE
+gcc c- $CFILE
