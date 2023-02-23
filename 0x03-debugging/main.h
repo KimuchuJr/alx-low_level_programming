@@ -2,17 +2,12 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
-int _putchar(char c);
-void print_alphabet(void);
-void print_alphabet_x10(void);
-int _islower(int c);
-int _isalpha(int c);
-void print_to_98(int n);
-int add(int, int);
-void times_table(void);
-void jack_bauer(void);
-int print_last_digit(int n);
-int _abs(int);
-int print_sign(int n);
+
+#include <stdio.h>
+
+void positive_or_negative(int i);
+int largest_number(int a, int b, int c);
+int convert_day(int month, int day);
+void print_remaining_days(int month, int day, int year);
 
 #endif
