@@ -4,7 +4,7 @@
 
 /**
  * main - Entry point
- * Description: print the last digit
+ *
  * Return: 0 (success)
  */
 int main(void)
@@ -21,6 +21,6 @@ int main(void)
 	else if (lastDigit == 0)
 		printf("0\n");
 	else
-		printf("less than 6 but not 0\n");
+		printf("less than 6 and not 0\n");
 	return (0);
 }

@@ -2,15 +2,15 @@
 
 /**
  * main - Entry point
- * Description: Print number 0 - 9
+ * Description: print number 0 to 9
  * Return: 0 (success)
  */
 int main(void)
 {
-	int n;
+	int num;
 
-	for (n = 0; n <= 9; n++)
-		putchar((char)n);
+	for (num = 48; num <= 57; num++)
+		putchar((char)num);
 	putchar('\n');
 	return (0);
 }
