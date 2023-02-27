@@ -2,7 +2,7 @@
 
 /**
  * rev_string - reverses the string
- * str - string to be processed
+ * @str : string to be processed
  */
 void rev_string(char *str)
 {
@@ -19,8 +19,8 @@ void rev_string(char *str)
 }
 
 /**
- * _strlen - determine string length
- * @str - string to be processed
+ * _strlen - Used to determine string length
+ * @str : string to be processed
  * Return: String length
  */
 int _strlen(char *str)

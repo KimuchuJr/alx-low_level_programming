@@ -2,8 +2,8 @@
 
 /**
  * puts_half - prints second half of a string
- * Description - If the number of characters are odd the function will print the last n characters where n = (length_of_the_string - 1) / 2
- * str - string to be processed
+ * Description -print the last n characters where n = (String length - 1) / 2
+ * @str :estring to be processed
  */
 void puts_half(char *str)
 {

@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * puts2 - prints every string character 
+ * puts2 - prints every string character
  * starting with the first character followed by a new line
- * str - string to be processed
+ * @str : string to be processed
  */
 void puts2(char *str)
 {
