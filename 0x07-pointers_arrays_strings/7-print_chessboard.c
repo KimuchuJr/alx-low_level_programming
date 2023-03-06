@@ -1,18 +1,24 @@
+#include <stdio.h>
+#include <stddef.h>
 #include "main.h"
 
 /**
- * print_chessboard - Prints a chessboard.
- * @a: The chessboard to be printed.
+ * print_chessboard - print a chess board
+ *
+ * @a: pointer to a multidimensional array
+ *
  */
 void print_chessboard(char (*a)[8])
 {
-	int indx1, indx2;
+	int i, j, size;
 
-	for (indx1 = 0; a[indx1][7]; indx1++)
+	size = 8;
+	for (i = 0; i < size; ++i)
 	{
-		for (indx2 = 0; indx2 < 8; indx2++)
-			_putchar(a[indx1][indx2]);
-
-		_putchar('\n');
+		for (j = 0; j < size; ++j)
+		{
+			printf("%c", a[i][j]);
+		}
+		printf("\n");
 	}
 }
