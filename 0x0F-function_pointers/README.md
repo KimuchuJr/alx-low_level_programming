@@ -1,1 +1,1 @@
-This folder contains files containing function pointers projects in C programming language
+This folder contains files containing function pointers in C programming language
