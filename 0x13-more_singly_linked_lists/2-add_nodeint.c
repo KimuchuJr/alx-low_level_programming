@@ -5,21 +5,21 @@
  *
  * @header: Head node pointer
  *
- * @b: Integer
+ * @n: Integer
  *
  * Return: Element address
  *
  */
-listint_t *add_nodeint(listint_t **header, const int b)
+listint_t *add_nodeint(listint_t **header, const int n)
 {
-	listint_t *node;
+	listint_t *nd;
 
-	node = malloc(sizeof(listint_t));
-	if (!node)
+	nd = malloc(sizeof(listint_t));
+	if (!nd)
 		return (NULL);
-	node->b = b;
-	node->next = *header;
-	*header = node;
+	nd->n = n;
+	nd->next = *header;
+	*header = nd;
 
-	return (node);
+	return (nd);
 }
