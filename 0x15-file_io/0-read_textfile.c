@@ -6,39 +6,40 @@
 #include "main.h"
 
 /**
- * read_textfile - Reads a text file
+ * read_textfile - Reads the text file
  *
- * @filename: file to read
- * @letters: number of letters to read and print
+ * @fn: File to read
  *
- * Return: Number of letters.
+ * @ltrs: Number of letters
+ *
+ * Return: Number of letters it can read and print
  */
-ssize_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *fn, size_t ltrs)
 {
-	int f;
-	char *use;
-	ssize_t readc, writec;
+	int j;
+	char *b;
+	ssize_t read_cnt, write_cnt;
 
-	if (filename == NULL)
+	if (fn == NULL)
 		return (0);
-	f = open(filename, O_RDONLY);
-	if (f == -1)
-		return (0);
-
-	use = malloc(letters);
-	if (!use)
-		return (0);
-	readc = read(f, use, letters);
-	if (readc == -1)
+	j = open(fn, O_RDONLY);
+	if (j == -1)
 		return (0);
 
-	writec = write(STDOUT_FILENO, use, readc);
-
-	close(f);
-	free(use);
-
-	if (readc != writec)
+	b = malloc(ltrs);
+	if (!b)
+		return (0);
+	read_cnt = read(j, b, ltrs);
+	if (read_cnt == -1)
 		return (0);
 
-	return (writec);
+	write_cnt = write(STDOUT_FILENO, b, read_cnt);
+
+	close(j);
+	free(b);
+
+	if (read_cnt != write_cnt)
+		return (0);
+
+	return (write_cnt);
 }
