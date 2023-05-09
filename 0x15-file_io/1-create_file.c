@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "main.h"
 
+long my_strlen(char *str);
 /**
  * create_file - create a file
  *
