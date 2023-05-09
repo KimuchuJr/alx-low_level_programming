@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-long my_strlen(char *str;)
+long my_strlen(char *str);
 /**
  * append_text_to_file - Append file text
  *
@@ -30,7 +30,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		bytes_written = write(fd, text_content, my_strlen(text_content));
+		bytes_written = write(f, text_content, my_strlen(text_content));
 		if (bytes_written == -1)
 		{
 			close(f);
