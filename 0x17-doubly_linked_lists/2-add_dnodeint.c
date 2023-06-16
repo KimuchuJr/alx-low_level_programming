@@ -3,39 +3,27 @@
 #include "lists.h"
 
 /**
- * add_dnodeint_end - add a node to the end of a doubly linked list
+ * add_dnodeint - add a node to beginning of a doubly linked list
  *
  * @head: address of the head node
  * @num: integer data of the new node
  *
  * Return: address of the new node
+ *
  */
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int num)
+dlistint_t *add_dnodeint(dlistint_t **head, const int num)
 {
-	dlistint_t *new_node, *current;
+	dlistint_t *newhead;
 
-	new_node = malloc(sizeof(dlistint_t));
-	if (new_node == NULL)
+	newhead = malloc(sizeof(dlistint_t));
+	if (newhead == NULL)
 		return (NULL);
+	newhead->n = num;
 
-	new_node->n = num;
-	new_node->next = NULL;
+	newhead->next = *head;
+	if (*head)
+		(*head)->prev = newhead;
+	*head = newhead;
 
-	if (*head == NULL)
-	{
-		new_node->prev = NULL;
-		*head = new_node;
-	}
-	else
-	{
-		current = *head;
-		while (current->next != NULL)
-			current = current->next;
-
-		current->next = new_node;
-		new_node->prev = current;
-	}
-
-	return (new_node);
+	return (newhead);
 }
-
